@@ -1,3 +1,10 @@
+:root {
+  --primary: #0f2a44;      /* Dunkles Business-Blau */
+  --secondary: #2563eb;    /* Akzent / Buttons */
+  --text: #111827;         /* Haupttext */
+  --muted: #6b7280;        /* Sekundärer Text */
+  --background: #ffffff;  /* Hintergrund */
+}
 :root{
   --navy:#0a2540;
   --orange:#ff6a3d;
