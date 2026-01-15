@@ -1,9 +1,9 @@
 :root {
-  --primary: #e5e7eb;
-  --secondary: #38bdf8;
-  --background: #0b1220;
-  --text: #f9fafb;
-  --muted: #9ca3af;
+  --primary: #111827;
+  --secondary: #2563eb;
+  --background: #f9fafb;
+  --text: #111827;
+  --muted: #6b7280;
 }
 
 body {
@@ -12,11 +12,13 @@ body {
   font-family: "Inter", Arial, sans-serif;
 }
 
-h1, h2 {
+h1 {
   color: var(--primary);
+  font-weight: 700;
 }
 
 button, .btn {
   background: var(--secondary);
-  color: #0b1220;
+  color: white;
+  border-radius: 10px;
 }
