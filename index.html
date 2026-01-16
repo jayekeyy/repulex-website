@@ -1,326 +1,184 @@
-<a class="logo" href="#top" aria-label="Repulex">
-  <img src="repulex-logo.png" alt="Repulex" />
-  <span class="tag">Reputationsschutz • rechtssicher • diskret</span>
-</a>
 <!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Repulex – Reputationsschutz bei rechtswidrigen Google-Bewertungen</title>
-  <meta name="description" content="Repulex schützt Ihre Reputation: rechtssichere Prüfung und Unterstützung bei der Entfernung rechtswidriger Google-Bewertungen. Schnell. Zuverlässig. Diskret." />
-<link rel="stylesheet" href="styles.css">
-  <style>
-    :root{
-      /* Brand palette */
-      --navy:#15304D;
-      --navy-2:#0f2237;
-      --orange:#F97316;
-      --orange-2:#FB923C;
-      --bg:#F2F4F7;         /* hellgrau */
-      --panel:#FFFFFF;
-      --text:#0B1220;
-      --muted:#526074;
-      --border:#E3E7EF;
-
-      --shadow:0 16px 40px rgba(11,18,32,.08);
-      --r:18px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:radial-gradient(900px 500px at 15% 0%, rgba(249,115,22,.14), transparent 60%),
-                 radial-gradient(900px 500px at 85% 10%, rgba(21,48,77,.12), transparent 60%),
-                 var(--bg);
-      color:var(--text);
-    }
-    a{color:inherit}
-    .container{width:min(1040px, calc(100% - 32px)); margin:0 auto}
-
-    /* Topbar */
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      background:rgba(242,244,247,.82);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid var(--border);
-    }
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px; padding:14px 0;
-    }
-    .logo{
-      display:flex; align-items:center; gap:12px;
-      text-decoration:none;
-    }
-    .logo img{height:34px; width:auto; display:block}
-    .tag{
-      font-size:12px;
-      color:var(--muted);
-      border:1px solid var(--border);
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(255,255,255,.7);
-      white-space:nowrap;
-    }
-    @media (max-width: 560px){ .tag{display:none} }
-
-    .btn{
-      appearance:none; border:0; cursor:pointer; text-decoration:none;
-      padding:11px 14px; border-radius:12px;
-      font-weight:850; display:inline-flex; align-items:center; gap:10px;
-      background:var(--navy); color:#fff;
-      box-shadow: 0 10px 22px rgba(21,48,77,.15);
-      transition: transform .08s ease, filter .15s ease, background .15s ease;
-      white-space:nowrap;
-    }
-    .btn:hover{background:var(--navy-2)}
-    .btn:active{transform:translateY(1px)}
-    .btn.orange{
-      background:linear-gradient(180deg, var(--orange), var(--orange-2));
-      color:#1b1208;
-      box-shadow: 0 10px 22px rgba(249,115,22,.22);
-    }
-    .btn.orange:hover{filter:brightness(1.02)}
-    .btn.ghost{
-      background:transparent; color:var(--navy);
-      border:1px solid var(--border);
-      box-shadow:none;
-    }
-    .btn.ghost:hover{background:rgba(255,255,255,.75)}
-
-    /* Hero */
-    .hero{padding:44px 0 26px}
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:16px;
-      align-items:start;
-    }
-    @media (max-width: 920px){ .hero-grid{grid-template-columns:1fr} }
-
-    .card{
-      background:rgba(255,255,255,.88);
-      border:1px solid var(--border);
-      border-radius:var(--r);
-      padding:18px;
-      box-shadow:var(--shadow);
-    }
-
-    h1{
-      margin:0 0 10px;
-      font-size: clamp(30px, 4.2vw, 48px);
-      line-height:1.06;
-      letter-spacing:-.3px;
-      color:var(--navy);
-    }
-    .lead{margin:0 0 14px; color:var(--muted)}
-    .lead strong{color:var(--text)}
-    .row{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
-
-    /* Feature strip */
-    .strip{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap:12px;
-      margin-top:14px;
-    }
-    @media (max-width: 820px){ .strip{grid-template-columns:1fr} }
-    .mini{
-      padding:14px;
-      border-radius:16px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.7);
-    }
-    .mini b{display:block; margin-bottom:4px; color:var(--navy)}
-    .mini span{color:var(--muted)}
-
-    /* Section */
-    .section{padding:18px 0 44px}
-
-    /* Form */
-    .form{display:grid; gap:10px}
-    label{display:grid; gap:6px; font-weight:850; color:var(--navy)}
-    input, textarea, select{
-      width:100%;
-      padding:11px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:#fff;
-      color:var(--text);
-      font: inherit;
-      outline:none;
-    }
-    input:focus, textarea:focus, select:focus{
-      border-color: color-mix(in srgb, var(--orange) 55%, var(--border));
-      box-shadow: 0 0 0 4px rgba(249,115,22,.18);
-    }
-
-    .fine{
-      margin-top:10px;
-      font-size:12px;
-      color:var(--muted);
-    }
-
-    /* Footer */
-    footer{
-      padding:22px 0 34px;
-      border-top:1px solid var(--border);
-      color:var(--muted);
-    }
-    .foot{
-      display:flex; justify-content:space-between; align-items:center;
-      gap:12px; flex-wrap:wrap;
-    }
-    .mail{
-      color:var(--navy);
-      font-weight:850;
-      text-decoration:none;
-    }
-    .mail:hover{text-decoration:underline}
-  </style>
+  <title>Repulex – Negative Google Bewertungen entfernen</title>
+  <meta name="description" content="Repulex hilft Unternehmen, unfaire und rechtswidrige Google Bewertungen entfernen zu lassen – für mehr Vertrauen und eine starke Reputation." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="topbar">
-    <header class="container">
-      <a class="logo" href="#top" aria-label="Repulex">
-        <img src="repulex-logo.png" alt="Repulex" />
-        <span class="tag">Reputationsschutz • rechtssicher • diskret</span>
-      </a>
-      <a class="btn orange" href="#kontakt">Ersteinschätzung anfragen</a>
-    </header>
-  </div>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">Repulex</div>
+      <div class="navlinks">
+        <a href="#leistung">Leistung</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </div>
+  </header>
 
-  <main id="top">
-    <section class="hero container">
-      <div class="hero-grid">
-        <div class="card">
-          <h1>Rechtswidrige Google-Bewertungen? Repulex schützt Ihren Ruf.</h1>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="badge">Reputationsschutz für Unternehmen</div>
+          <h1>Negative Google Bewertungen entfernen lassen – und Vertrauen zurückgewinnen.</h1>
           <p class="lead">
-            Eine negative Bewertung kann Vertrauen und Anfragen kosten.
-            Wir prüfen <strong>rechtssicher</strong> und unterstützen bei der Entfernung <strong>rechtswidriger Inhalte</strong>
-            (Fake, Beleidigung, Schmähkritik, unwahre Tatsachen).
+            Schlechte Bewertungen senken Anfragen, Umsatz und Abschlussquote. Wir helfen dabei,
+            <strong>unfaire oder rechtswidrige Bewertungen</strong> professionell prüfen und entfernen zu lassen –
+            damit dein Profil wieder überzeugt.
           </p>
 
-          <div class="row">
-            <a class="btn orange" href="#kontakt">Kontaktformular öffnen</a>
-            <a class="btn ghost" href="mailto:info@repulex.de">info@repulex.de</a>
+          <div class="cta-row">
+            <a class="btn primary" href="mailto:info@repulex.de?subject=Anfrage%20Bewertung%20entfernen&body=Hallo%20Repulex%2C%0A%0AIch%20m%C3%B6chte%20eine%20Google%20Bewertung%20pr%C3%BCfen%20lassen.%0A%0ALink%20zum%20Google-Profil%3A%20%0ALink%20zur%20Bewertung%3A%20%0AKurz%20zum%20Fall%3A%20%0A%0AViele%20Gr%C3%BC%C3%9Fe">
+              Kostenlose Ersteinschätzung
+            </a>
+            <a class="btn ghost" href="#ablauf">So läuft’s ab</a>
           </div>
 
-          <div class="strip" aria-label="Kurzleistungen">
-            <div class="mini">
-              <b>Schnell</b>
-              <span>Kurze Ersteinschätzung auf Basis Link + Kontext.</span>
+          <div class="trust">
+            <div class="trust-item">
+              <div class="trust-title">Fokus</div>
+              <div class="trust-text">Google Bewertungen & Reputation</div>
             </div>
-            <div class="mini">
-              <b>Zuverlässig</b>
-              <span>Klare Schritte, nachvollziehbare Kommunikation.</span>
+            <div class="trust-item">
+              <div class="trust-title">Ziel</div>
+              <div class="trust-text">Deinen 5-Sterne-Ruf wiederherstellen</div>
             </div>
-            <div class="mini">
-              <b>Rechtssicher</b>
-              <span>Fokus auf rechtswidrige Bewertungen – keine Tricks.</span>
+            <div class="trust-item">
+              <div class="trust-title">Ansatz</div>
+              <div class="trust-text">Prüfen • Begründen • Durchsetzen</div>
             </div>
           </div>
+
+          <p class="note">
+            Hinweis: Wir entfernen keine legitimen Kundenmeinungen. Wir unterstützen bei Bewertungen, die z.B. unwahr, beleidigend,
+            nicht nachvollziehbar oder rechtswidrig sein können.
+          </p>
         </div>
 
-        <aside id="kontakt" class="card">
-          <h2 style="margin:0 0 10px; color:var(--navy)">Unverbindliche Preisanfrage</h2>
-          <p class="lead" style="margin-bottom:12px">Senden Sie den Bewertungslink – wir melden uns mit Einschätzung & Vorgehen.</p>
+        <div class="hero-card">
+          <div class="card">
+            <h2>Weniger Risiko. Mehr Vertrauen.</h2>
+            <ul class="checklist">
+              <li>Negative Bewertung senkt Vertrauen neuer Kunden</li>
+              <li>Schlechte Sterne wirken sofort auf Klicks & Anfragen</li>
+              <li>Wir bringen Struktur und Druck in den Prozess</li>
+            </ul>
 
-          <form id="contactForm" class="form">
-            <label>
-              Ich bin
-              <select name="audience" required>
-                <option value="" disabled selected>Bitte wählen</option>
-                <option>Unternehmen</option>
-                <option>Privatperson</option>
-              </select>
-            </label>
+            <div class="divider"></div>
 
-            <label>
-              Name / Firma
-              <input name="name" required />
-            </label>
+            <h3>Schnellstart</h3>
+            <ol class="steps">
+              <li>Link zur Bewertung senden</li>
+              <li>Wir prüfen und formulieren den Fall</li>
+              <li>Einreichung & Nachverfolgung</li>
+            </ol>
 
-            <label>
-              E-Mail
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
-
-            <label>
-              Link zur Bewertung
-              <input name="reviewUrl" type="url" placeholder="https://..." required />
-            </label>
-
-            <label>
-              Kurzbeschreibung
-              <textarea name="message" rows="4" placeholder="Was ist passiert?" required></textarea>
-            </label>
-
-            <button class="btn" type="submit">Anfrage per E-Mail senden</button>
-            <div id="formMsg" class="fine" role="status" aria-live="polite"></div>
-
-            <div class="fine">
-              Hinweis: Repulex verspricht keine Entfernung „um jeden Preis“. Wir unterstützen bei der Durchsetzung Ihrer Rechte bei rechtswidrigen Bewertungen.
-            </div>
-          </form>
-        </aside>
+            <a class="btn full primary" href="#kontakt">Kontakt aufnehmen</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section container">
-      <div class="card" style="display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
-        <div>
-          <div style="font-weight:950; color:var(--navy); font-size:18px">Direktkontakt</div>
-          <div class="lead" style="margin:6px 0 0">Schreiben Sie uns direkt: <a class="mail" href="mailto:info@repulex.de">info@repulex.de</a></div>
+    <section id="leistung" class="section">
+      <div class="container">
+        <h2>Was wir für dich tun</h2>
+        <div class="grid3">
+          <div class="box">
+            <h3>Prüfung</h3>
+            <p>Wir analysieren Inhalt, Kontext und mögliche Richtlinien-/Rechtsverstöße – klar und nachvollziehbar.</p>
+          </div>
+          <div class="box">
+            <h3>Argumentation</h3>
+            <p>Wir erstellen eine präzise Begründung (Fakten, Logik, Struktur), damit der Fall sauber sitzt.</p>
+          </div>
+          <div class="box">
+            <h3>Durchsetzung</h3>
+            <p>Wir kümmern uns um Einreichung und Nachverfolgung – mit Fokus auf Entfernung unzulässiger Inhalte.</p>
+          </div>
         </div>
-        <a class="btn orange" href="#kontakt">Zum Formular</a>
       </div>
     </section>
 
-    <footer>
-      <div class="container foot">
-        <div>© <span id="year"></span> Repulex</div>
-        <div style="display:flex; gap:14px; flex-wrap:wrap">
-          <a href="#" style="color:inherit">Impressum</a>
-          <a href="#" style="color:inherit">Datenschutz</a>
+    <section id="ablauf" class="section alt">
+      <div class="container">
+        <h2>Ablauf in 3 Schritten</h2>
+        <div class="grid3">
+          <div class="box">
+            <div class="num">1</div>
+            <h3>Bewertung senden</h3>
+            <p>Schick uns den Link zur Bewertung und dein Google Unternehmensprofil.</p>
+          </div>
+          <div class="box">
+            <div class="num">2</div>
+            <h3>Prüfung & Strategie</h3>
+            <p>Wir sagen dir direkt, ob und wie man vorgehen kann – ohne bla bla.</p>
+          </div>
+          <div class="box">
+            <div class="num">3</div>
+            <h3>Einreichung</h3>
+            <p>Wir reichen den Fall ein und bleiben dran, bis eine Entscheidung vorliegt.</p>
+          </div>
+        </div>
+
+        <div class="cta-slab">
+          <div>
+            <h3>Bereit, deinen Ruf zu schützen?</h3>
+            <p>Schick uns den Link – wir melden uns mit einer klaren Einschätzung.</p>
+          </div>
+          <a class="btn primary" href="mailto:info@repulex.de?subject=Bewertung%20pr%C3%BCfen%20(Repulex)&body=Hallo%20Repulex%2C%0A%0AHier%20ist%20der%20Link%20zur%20Bewertung%3A%20%0AHier%20ist%20der%20Link%20zum%20Google-Profil%3A%20%0AKurzbeschreibung%3A%20%0A%0ADanke!">
+            Link senden
+          </a>
         </div>
       </div>
-    </footer>
+    </section>
+
+    <section id="kontakt" class="section">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <div class="contact">
+          <div class="box">
+            <h3>Schreib uns</h3>
+            <p>Am schnellsten per E-Mail. Bitte Link zur Bewertung mitschicken.</p>
+            <p class="contact-line">
+              <span class="label">E-Mail</span>
+              <a href="mailto:info@repulex.de">info@repulex.de</a>
+            </p>
+          </div>
+
+          <div class="box">
+            <h3>Warum das wirkt</h3>
+            <p>
+              Negative Bewertungen haben direkte Auswirkungen auf das Vertrauen neuer Kunden.
+              Repulex ist die Lösung, um deinen <strong>5-Sterne-Ruf</strong> wiederherzustellen –
+              durch saubere Prüfung, klare Argumentation und konsequentes Nachfassen.
+            </p>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footgrid">
+            <div>
+              <div class="brand small">Repulex</div>
+              <div class="muted">Reputation schützen. Vertrauen zurückholen.</div>
+            </div>
+            <div class="footlinks">
+              <a href="impressum.html">Impressum</a>
+            </div>
+          </div>
+          <div class="tiny muted">© <span id="year"></span> Repulex</div>
+        </footer>
+      </div>
+    </section>
   </main>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Send via mailto (ohne Backend)
-    const toMail = (subject, body) => {
-      const mail = "info@repulex.de";
-      const url = `mailto:${mail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = url;
-    };
-
-    document.getElementById("contactForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(e.target).entries());
-
-      const subject = "Repulex – Unverbindliche Preisanfrage & Ersteinschätzung";
-      const body =
-`Ich bin: ${data.audience}
-Name/Firma: ${data.name}
-E-Mail: ${data.email}
-Bewertungslink: ${data.reviewUrl}
-
-Kurzbeschreibung:
-${data.message}
-
-— gesendet über repulex.de`;
-
-      document.getElementById("formMsg").textContent = "E-Mail wird geöffnet…";
-      toMail(subject, body);
-    });
   </script>
 </body>
 </html>
