@@ -21,6 +21,15 @@
 
   --shadow:0 16px 40px rgba(11,18,32,.08);
   --radius:18px;
+   /* FORCE LOGO SIZE */
+.logo img{
+  height: 64px !important;
+  width: auto !important;
+  max-height: none !important;
+}
+@media (max-width:560px){
+  .logo img{ height: 52px !important; }
+}
 }
 
 /* ---------- Base ---------- */
